@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://is82kl0836ge"]
+
+[ext_resource type="Script" uid="uid://cpdttvkbx24l0" path="res://scene/collision_shape_2d.gd" id="1_jsjxs"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mme07"]
+
+[node name="killerzone" type="Area2D" unique_id=455320175]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=874224765]
+position = Vector2(865, 269)
+shape = SubResource("WorldBoundaryShape2D_mme07")
+script = ExtResource("1_jsjxs")
+
+[connection signal="body_entered" from="." to="CollisionShape2D" method="_on_killerzone_body_entered"]

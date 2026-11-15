@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://do5ak2ih2juxx"]
+
+[ext_resource type="Texture2D" uid="uid://wtdvf4kf64n5" path="res://assests/sprites/platforms.png" id="1_ktvqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mme07"]
+size = Vector2(31, 9)
+
+[node name="platform" type="Node2D" unique_id=1127187114]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=683799688]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=880509515]
+position = Vector2(3, -2)
+texture = ExtResource("1_ktvqv")
+region_enabled = true
+region_rect = Rect2(16, 16, 32, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=224511100]
+position = Vector2(3.5, -2.5)
+shape = SubResource("RectangleShape2D_mme07")
